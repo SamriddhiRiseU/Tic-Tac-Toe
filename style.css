@@ -1,0 +1,111 @@
+
+
+body{
+    background-color:#A59E8C;
+    text-align: center;
+
+}
+
+.container{
+    height:70vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.game{
+    height:60vmin;
+    width:60vmin;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1vmin;
+
+}
+
+.box{
+    height:18vmin;
+    width:18vmin;
+    border-radius: 1rem;
+    border:none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    font-size: 8vmin;
+    color:#b0413e;
+    font-weight: 200;
+    background-color:#95CFB7 ;
+    
+}
+
+#R{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: black;
+    color:white;
+    border-radius: 1rem;
+    border:none;
+
+}
+
+#new-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: black;
+    color:white;
+    border-radius: 1rem;
+    border:none;
+}
+#msg{
+    color:white;
+    font-size:5vmin;
+}
+
+.msg-container{
+    height:50vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.hide{
+    display: none;
+}
+
+#balloons {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 50px;
+    height: 65px;
+    border-radius: 50%;
+    animation: fly 4s linear forwards;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 70px;
+    background: black;
+    top: 60px;
+    left: 50%;
+}
+
+@keyframes fly {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-120vh);
+    }
+}
